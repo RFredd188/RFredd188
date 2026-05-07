@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #cookie {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #score {
+            position: absolute;
+            top: 200px;
+            left: 570px;
+            font-size: 24px;
+            color: rgb(0, 0, 0);
+            background-color: #669bce;
+            border: 3px solid rgb(0, 255, 255);
+            border-radius: 10px;
+            size: 200%;
+            font-size: xx-large;
+
+
+        }
+        #mult {
+            color:#d60000;
+            background-color: #000000;
+            font-size: large;
+            border-radius: 10px;
+        }
+        #auto {
+            color:#07eeff;
+            background-color: #000000;
+            font-size: large;
+            border-radius: 10px;
+        }
+        #nav { left: 4999px;}
+    </style>
+    <title>Temu Cookie Clicker</title>
+</head>
+
+<body>
+    <img src="Cookie.png" alt="Cookie" width="400" id="cookie" onclick="cookieClick()" onmouseover="">
+    <div id="score">0</div>
+    <button id="auto" onclick="autoClickUpgrade()">Upgrade Autoclick (100clicks)</button>
+    <button id="mult" onclick="clickMultUpgrade()">Upgrade Click Multiplier (100clicks)</button>
+    <nav>
+            <details>
+                <summary> Navigation Bar</summary>
+                    <ul>
+                        <li><a href="index.html">game</a> </li>
+                        <li><a href="Gamepage.Html">home</a> </li>
+                        <li><a href="https://guthib.com/">Funny</a> </li>
+                        <li><a href="Newgame.html"> New Game</a></li>
+                        <li><a href="cookie.html"> CookieTapper</a></li>
+                    </ul>
+            </details>
+        </nav>
+</body>
+<script>
+    //config
+    //auto
+    var autoclickDuration = 5000; //in ms
+    var autoclickCostPerLevel = 100; //clicks
+    var autoclickCost = 100;
+    //clickmult
+    var clickMult = 1;
+    var clickMultCostPerLevel = 100; //clicks
+    var clickMultCost = 100;
+
+    var score = 0;
+    var scoreBox = document.getElementById("score");
+    function cookieClick() {
+        score = score + (1 * clickMult);
+        scoreBox.innerHTML = score;
+    }
+    function autoClickUpgrade() {
+        if (score >= autoclickCost) {
+            score = score - autoclickCost;
+            autoclickDuration = autoclickDuration * 0.8
+     scoreBox.innerHTML = score;
+
+        }
+    }
+    function clickMultUpgrade() {
+        if (score >= clickMultCost) {
+            score = score - clickMultCost;
+            clickMult = clickMult + 1;
+     scoreBox.innerHTML = score;
+
+        }
+    }
+function autoclickLoop() {
+    score++;
+    scoreBox.innerHTML = score;
+    setTimeout(autoclickLoop, autoclickDuration);
+
+}
+autoclickLoop();
+
+</script>
+
+</html>
