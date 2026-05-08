@@ -26,19 +26,24 @@
 
 
         }
+
         #mult {
-            color:#d60000;
+            color: #d60000;
             background-color: #000000;
             font-size: large;
             border-radius: 10px;
         }
+
         #auto {
-            color:#07eeff;
+            color: #07eeff;
             background-color: #000000;
             font-size: large;
             border-radius: 10px;
         }
-        #nav { left: 4999px;}
+
+        #nav {
+            left: 4999px;
+        }
     </style>
     <title>Temu Cookie Clicker</title>
 </head>
@@ -49,22 +54,22 @@
     <button id="auto" onclick="autoClickUpgrade()">Upgrade Autoclick (100clicks)</button>
     <button id="mult" onclick="clickMultUpgrade()">Upgrade Click Multiplier (100clicks)</button>
     <nav>
-            <details>
-                <summary> Navigation Bar</summary>
-                    <ul>
-                        <li><a href="index.html">game</a> </li>
-                        <li><a href="Gamepage.Html">home</a> </li>
-                        <li><a href="https://guthib.com/">Funny</a> </li>
-                        <li><a href="Newgame.html"> New Game</a></li>
-                        <li><a href="cookie.html"> CookieTapper</a></li>
-                    </ul>
-            </details>
-        </nav>
+        <details>
+            <summary> Navigation Bar</summary>
+            <ul>
+                <li><a href="index.html">game</a> </li>
+                <li><a href="Gamepage.Html">home</a> </li>
+                <li><a href="https://guthib.com/">Funny</a> </li>
+                <li><a href="Newgame.html"> New Game</a></li>
+                <li><a href="cookie.html"> CookieTapper</a></li>
+            </ul>
+        </details>
+    </nav>
 </body>
 <script>
     //config
     //auto
-    var autoclickDuration = 5000; //in ms
+    var autoclickAmount = 0;
     var autoclickCostPerLevel = 100; //clicks
     var autoclickCost = 100;
     //clickmult
@@ -81,8 +86,8 @@
     function autoClickUpgrade() {
         if (score >= autoclickCost) {
             score = score - autoclickCost;
-            autoclickDuration = autoclickDuration * 0.8
-     scoreBox.innerHTML = score;
+            autoclickamount = autoclickamount + 1;
+            scoreBox.innerHTML = score;
 
         }
     }
@@ -90,17 +95,13 @@
         if (score >= clickMultCost) {
             score = score - clickMultCost;
             clickMult = clickMult + 1;
-     scoreBox.innerHTML = score;
+            scoreBox.innerHTML = score;
 
         }
     }
-function autoclickLoop() {
-    score++;
-    scoreBox.innerHTML = score;
-    setTimeout(autoclickLoop, autoclickDuration);
 
-}
-autoclickLoop();
+    function autoClick() { score = score + (1 * autoclickAmount); scoreBox.innerHTML = score; }
+    setInterval(autoClick, 250);
 
 </script>
 

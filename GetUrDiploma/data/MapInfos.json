@@ -27,5 +27,5 @@ null,
 {"id":25,"expanded":false,"name":"Shop","order":26,"parentId":24,"scrollX":811,"scrollY":449.5,"quick":false},
 {"id":26,"expanded":true,"name":"Mountains","order":19,"parentId":13,"scrollX":811,"scrollY":550.5,"quick":false},
 {"id":27,"expanded":true,"name":"Long Bridge","order":20,"parentId":26,"scrollX":811,"scrollY":1702.5,"quick":false},
-{"id":28,"expanded":false,"name":"HighMountains","order":21,"parentId":27,"scrollX":811,"scrollY":598.5,"quick":false}
+{"id":28,"expanded":false,"name":"HighMountains","order":21,"parentId":27,"scrollX":811,"scrollY":457.5,"quick":false}
 ]
