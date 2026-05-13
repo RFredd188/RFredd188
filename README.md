@@ -1,16 +1,48 @@
-## Hi there 👋
+<!DOCTYPE html>
+<html>
 
-<!--
-**RFredd188/RFredd188** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<head>
+    <title>homepage</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
 
-Here are some ideas to get you started:
+<body>
+    <header>
+        <h1>GetUrDiploma Main Page</h1>
+        <nav>
+            <details>
+                <summary> Navigation Bar</summary>
+                    <ul>
+                        <li><a href="index.html">game</a> </li>
+                        <li><a href="Gamepage.Html">home</a> </li>
+                        <li><a href="https://guthib.com/">Funny</a> </li>
+                        <li><a href="Newgame.html"> New Game</a></li>
+                        <li><a href="Pastry.html"> Pastry Tapper</a></li>
+                        <li><a href="about.html"> About</a></li>
+                    </ul>
+            </details>
+        </nav>
+    </header>
+    <section>
+        <article>
+            <h2>Welcome to my webpage :3</h2>
+            <time datetime="2026-04-07">April 7th</time>
+            <p>hello, this is my webpage, where you can play GetUrDiploma, and learn some stuffs about me. This is still in early
+                development (0.3.1). Expect a lot of bugs and unpolished stuff, So, if possible contact with any bugs found.</p>
+            <p>another thing to remember is that I'm still mostly new to this, and I have school, so don't expect anything too much </p>
+        </article>
+        <article>
+            <h2>other stuffs</h2>
+            <time datetime="2026-04-07">April 7th</time>
+            <p>I'm ballin' here</p>
+            <img src="Baller.png" alt="baller" width="500">
+    </section>
+    </article>
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+    <footer>made by Someone, 2026</footer>
+</body>
+
+</html>
